@@ -31,6 +31,16 @@ public interface IList<E>
    public E getLast();
    // pre: list is not empty
    // post: returns last value in list
+   Node<E> nodo = new Node<E>(value, null);
+   if(head != null){
+      while(nodo.next() != null){
+         nodo = nodo.next();
+      }
+      return nodo
+   }else{
+    return null;  
+   }
+   
 
    public E removeFirst();
    // pre: list is not empty
